@@ -10,6 +10,11 @@
         <tcpOptions soReuseAddr="true"/>
     </httpEndpoint>
 
-    <application name="JavaHelloWorldApp" context-root="/JavaHelloWorldApp" location="${appLocation}" type="war"/>
-
+    <application name="JavaHelloWorldApp" context-root="/JavaHelloWorldApp" location="${appLocation}" type="war">
+    	<classloader>
+    		<privateLibrary>
+		        <fileset dir="${server.config.dir}/lib/jars" includes="*.jar" scanInterval="5s"/> 
+		    </privateLibrary>
+    	</classloader>
+    </application>
 </server>
