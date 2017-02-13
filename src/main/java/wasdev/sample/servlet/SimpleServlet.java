@@ -94,7 +94,7 @@ public class SimpleServlet extends HttpServlet {
  			} // end finally try
  		} // end try
  		
- 		msgPage.append("<br>STEP 11: Done!");
+ 		msgPage.append("<br>STEP 11: Done...!");
     	
 		response.setContentType("text/html");
 		response.getWriter().print(msgPage);
